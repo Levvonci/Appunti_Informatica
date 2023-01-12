@@ -454,3 +454,193 @@ def prob2(a):
 
 Complessità? $O(n)$
 
+# Esercitazione 5
+
+## Esercizio 1
+
+Grafo diretto e pesato $G=(V,E,w)$, ad ogni arco è associato un peso $w(e)\geq0$ che rappresenta il costo della benzina 
+Due nodi $s_1,s_2$ e un nodo di arrivo $t$ 
+Per ogni nodo $v$ si conosce il costo del parcheggio, ovvero $c(v)$ (per semplicità si assume che $c(s_1)=c(s_2)=c(t)=0$)
+Progettare un algoritmo con complessità $O(m+nlog(n))$ che faccia spendere il meno possibile in termini di costo della benzina e del parcheggio
+
+**Grafo**
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112091415.png|center|500]]
+
+**Idea/Soluzione**
+
+"Indovinare" il nodo in cui Guala e Clementi parcheggiano l'auto, e poi da li calcolare il cammino minimo verso t
+
+$cost(x):=d(s_1,x)+d(s_2,x)+c(x)+d(x,t)$
+
+cost(x) costo totale se guala e clementi parcheggiano nel nodo x
+
+**Corretto?** Si
+**Complessità**?
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112091612.png|center|500]]
+
+Costo $O(m+nlog(n))$
+
+## Esercizio 2
+
+- grafo orientato G=(V,E,w) con pesi non negativi
+- $B\subseteq E$ sottoinsieme di archi blu 
+- k intero, $s,t\in V$
+
+Output: un cammino di costo minimo da s a t che usa al più k archi blu
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112111246.png|center|400]]
+
+**Idea 1/Soluzione**
+
+"Indovinare" i k archi blu della soluzione
+
+$\overline G=(V,E-B)$  
+Per ogni k-tupla F di archi in B:
+- calcola il cammino minimo da s a t nel grafo $\overline G+F$ 
+restituisci il miglior cammino trovato
+
+Correttezza?
+- Ogni cammino calcolato è un cammino ammisibbile
+- Quando guardo la k-tupla usata dalla soluzione (o un sovrainsieme) il cammino calcolato è quello ottimo cercato
+
+Complessità? $O(|B|^k(m+nlog(n)))$
+
+**Idea 2/Soluzione**
+
+Ridurre il problema al calcolo di un cammino minimo su un opportuno grafo ausiliario $G'$
+
+- $G'$ fatto "a livelli"
+- ogni volta che uso un arco blu sono costretto a cambiare livello
+- num. livelli dipende da k
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112112027.png|center|600]]
+
+
+**Definizione di $G'$**
+
+nodi:
+
+- per ogni nodo $v\in V$ ho $k+1$ nodi $v_0,v_1,...,v_k$
+- un nodo $\overline t$
+
+archi:
+- per ogni arco (u,v) non blu in G ho gli archi ($u_i,v_i$), $i=0,1,..,k$ di peso $w(u,v)$
+- per ogni arco (u,v) blu in G ho gli archi ($u_i,v_{i+1}$),$i=0,1,...,k-1$ di peso $w(u,v)$
+- ho archi $(t_i,\overline t)$, $i=0,1,...,k$ di peso 0
+
+soluzione cercara: cammino minimo in $G'$ da $s_0\to\overline t$
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112114304.png|center|400]]
+
+**correttezza**:
+
+>[!tips]- Proprietà
+>Esiste un cammino in G da s a t che usa al più k archi blu di costo w se e solo se esiste un cammino in $G'$ da $s_0$ a $\overline t$ di costo w
+
+**complessità**
+- dimensione di $G'$:
+	- $n'=n(k+1)+1=\Theta(nk)$
+	- $m'\leq(k+1)m+k=\Theta(mk)$
+- costruzione di $G'$: $O(m'+n')=O(k(m+n))$
+- calcolo cammino minimo in $G'$: $O(m'+n'log(n'))=O(k(m+nlog(n)))$
+
+Quindi l'algoritmo ha costo $O(k(m+nlog(n)))$ 
+
+# Esercitazione 6
+
+## Esercizio 1
+
+Grafo non orientato e non pesato $G=(V,E)$
+Due nodi $s_1,s_2$ e due nodi di arrivo $t_1,t_2$ 
+I due robot devono stare a distanza almeno k, con k elemento del problema
+
+**Obiettivo**: Spostare $s_1\to t_1,s_2\to t_2$
+**Mossa**: sposta un robot verso il nodo adiacente
+**Vincolo**: i robot devono essere sempre a distanza almeno k
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112093134.png|center|300]]
+
+Trovare la sequenza minima di mosse.
+
+**Esempio** Da pagina 4 a pagina 14 [Esempio](http://www.mat.uniroma2.it/~guala/esercitazione_6_2021.pdf#page=4)
+
+**Idea/Soluzione**
+
+Ridurre il problema al calcolo di un cammino minimo in un opportuno **grafo delle configurazioni**
+
+Grafo ausiliario $G'=(V',E')$ definito così:
+- $V'=\{\langle u,v\rangle:u,v\in V,d_G(u,v)\geq k\}$
+- $E'=\{(\langle u,v\rangle,\langle x,y\rangle):(u=x,(v,y)\in E)\lor(v=y,(u,x)\in E)\}$
+
+Una possibile configurazione:
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112094651.png|center|250]]
+
+Robot blu su "u" e robot rosso su "v"
+
+Il grafo è fatto in questo modo:
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112094846.png|center|500]]
+
+Adesso quello che devo fare è cercare un cammino minimo da $\langle s_1,s_2\rangle\to\langle t_1,t_2\rangle$
+
+**Correttezza**:
+
+>[!tips]- Proprietà
+>Esiste una sequenza di k mosse che porta i robot nella posizione finale **se e soltanto se** essite un cammino in $G'$ da $\langle s_1,s_2\rangle\to\langle t_1,t_2\rangle$ di lunghezza k
+
+**Complessità**
+
+Dimensione di $G'$: 
+
+$|V'|=O(n^2)$ 
+$$\begin{align}&|E'|\leq\sum_{\{u,v\}\in V'}\delta_{G'}(\{u,v\})\leq\sum_{\{u,v\}\in V'}(\delta_G(u)+\delta_G(v))=\sum_{\{u,v\}\in V'}\delta_G(u)+\sum_{\{u,v\}\in V'}\delta_G(u)\leq\\&\sum_{u,v\in V}\delta_G(u)+\sum_{u,v\in V}\delta_G(v)\leq n\sum_{u\in V}\delta_G(u)+n\sum_{v\in V}\delta_G(v)\leq 2nm+2nm=O(nm)\end{align}$$
+
+Calcolo cammino minimo in $G'$:
+
+$O(|V'|+|E'|)\implies O(n^2+nm)=O(nm)$
+
+Costruzione di $G'$:
+
+$O(|V'|+|E'|)=O(nm)$ Se trovo le distanze fra tutte le coppie in $O(nm)$ (eseguo n visite BFS, una da ogni vertice)
+
+## Esercizio 2
+
+Grafo non orientato $G=(V,E)$ di n nodi e m archi
+Alice vuole spostarsi in tutti i rimenenti n-1 nodi
+Ad ogni arco è associato un valore $w(e)$ che indica l'età minima necessaria per attraversare l'arco
+
+Un posto v è raggiungibile da Alice all'età x se esiste un cammino da s a v composto di soli archi di peso minore o uguale a x
+
+Progettare un algoritmo che calcoli l'età minima che consente ad Alice di vedere il mondo intero, ovvero la più piccola età x per cui tutti i posti sono raggiungibili da Alice all'età x
+
+Esempio di grafo
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112101504.png|center|500]]
+
+**Esempio** da pagina 20 a pagina 29 [Esempio](http://www.mat.uniroma2.it/~guala/esercitazione_6_2021.pdf#page=20)
+
+**Idea/Soluzione**
+
+Far crescere l'insieme degli archi utilizzabili con l'età
+
+Considera gli archi di G ordinati in ordine crescente di peso:
+$\underbrace{e_1,e_2,e_3,...,e_i}_{E_i},...,e_{m-1},e_m$
+$G_i=(V,E_i)$
+
+**Osservazione**: se $G_i$ è connesso allora Alice può vedere il mondo intero all'età di $w(e_i)$
+
+**Goal**: trovare il minimo i per cui $G_i$ è connesso
+
+**Corretto?** Si, per oss. precedente
+**Complessità?**
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112104216.png|center|600]]
+
+
+Posso fare di meglio? Si, cerco l'indice i utilizzando la ricerca binaria
+
+![[appunti asd/mod i/esercizi/imges/Pasted image 20230112104548.png|center|600]]
+
+SI poteva risolvere anche con il calcolo del Minimum Spanning Tree, ma è un piccolo spoiler per ASD Mod 2

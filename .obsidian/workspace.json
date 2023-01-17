@@ -11,8 +11,12 @@
             "id": "e5f23c9c9dd5d829",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           },
           {
@@ -93,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -130,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md"
+              }
             }
           },
           {

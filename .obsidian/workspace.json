@@ -11,12 +11,8 @@
             "id": "e5f23c9c9dd5d829",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti FI/MOD I/Lezione 5 - Automi.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -97,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 5 - Automi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +109,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 5 - Automi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +130,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Appunti FI/MOD I/Lezione 5 - Automi.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,10 +174,10 @@
   },
   "active": "e5f23c9c9dd5d829",
   "lastOpenFiles": [
+    "Appunti FI/MOD I/Lezione 5 - Automi.md",
     "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
     "Appunti FI/MOD I/Lezione 2 - RE,Linguaggi e problemi.md",
     "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Appunti FI/MOD I/Lezione 5 - Automi.md",
     "Esami/Date Esami.md",
     "Day Planners/Day Planner-20230113.md",
     "README.md",

@@ -117,8 +117,62 @@ Data una MT $\mathcal M$ con alfabeto di input $\Sigma$, l'insieme $\Sigma^\star
 	- terminare in uno stato $q\in Q-F$
 	- non terminare
 
-# Turing-decidibilità
+### Turing-decidibilità
 
 - Un linguaggio $L$ è detto **Turing-decidibile** se esiste una DTM che lo riconosce
 - Un linguaggio $L$ è detto **Turing-semidecidibile** se esiste una DTM che lo accetta
- 
+
+# Macchine di Turing a più nastri
+
+Una MTM (**Multi-tape Turing Machine**) a k nastri ($k\geq2$) è una sestupla $\mathcal M^{(k)}=\langle\Gamma,\square,Q,q_0,F,\delta^{(k)}\rangle$ 
+dove:
+
+- $\Gamma=\bigcup_{i=1}^{(k)}\Gamma_i$ è l'unione dei k **alfabeti di nastro** $\Gamma_1,...,\Gamma_k$ non necessariamente distinti
+- $Q,q_0,F$ hanno lo stesso significato che nel caso della macchina di Turing ad 1 nastro 
+- la funzione di transizione $\delta^{(k)}$ è definita come: $$\delta^{(k)}:(Q-F)\times\overline\Gamma[1]\times...\times\overline\Gamma[k]\times\{\to,\leftarrow,\circ\}^k$$
+Una $\mathcal M$ esegue una transizione a partire da uno stato interno $q_i$ e con le k testine - una per nastro - posizionate sui caratteri $a_{i_1},...,a_{i_k}$
+
+Se $\delta^{(k)}(q_i,a_{i_1},...,a_{i_k})=(q_j,a_{j_1},...,a_{j_k},z_{j_1},...,z_{j_k})$:
+- si porta nello stato $q_j$
+- scrive i caratteri $a_{j_1},...,a_{j_k}$ sui rispettivi nastri
+- fa compiere alle testine i rispettivi spostamenti - a destra, a sinistra o nessuno spostamento, come specificato dagli $z_{j_l}\in\{\to,\leftarrow,\circ\},l=1,...,k$
+
+## Configurazioni di MTM
+
+Una _**configurazione istantaneta**_ di una macchina di Turing multinastro può essere rappresentata da una stringa del tipo 
+$$q\#\alpha_1\uparrow\beta_1\#\alpha_2\uparrow\beta_2\#...\#\alpha_k\uparrow\beta_k$$
+- q è lo stato attuale
+- il contenuto significativo del nastro $T_k$ è $\alpha_k\beta_k$
+- la testina del nastro $T_k$ è posizionata sulla cella contenente il primo carattere di $\beta_k$
+
+Una configurazione di una MTM è:
+- **finale**, se $q\in F$, quindi se lo stato attuale è finale, indipendentemente dal contenuto dei nastri
+- **iniziale** (con stringa di input x) se $q=q_0,\alpha_i=\varepsilon,i=1,...,k,\beta_1=x,\beta_i=\square,i=2,...,k$, quindi se il primo nastro contiene l'input con la testina sul primo carattere, e gli altri nastri sono vuoti
+
+**Esempio**
+
+Riconoscimento di $L=\{xc\hat x,x\in\{a,b\}^+\}$
+
+![[appunti fi/mod i/immagini/Pasted image 20230116151522.png|center|500]]
+
+Sul nastro di lavoro deve esserci $\square$
+
+- Operazioni:
+	1. input scandito da sx verso dx fino a quando si incontra il separatore c: simboli copiato sul nastro di lavoro da sx a dx
+	2. resto dell'input scandito da sx verso dx, nastro di lvaoro scandito da dx verso sx, confrontando i caratteri in input con quelli presenti sul nastro di lavoro
+- Alfabeto di input $\Sigma=\{a,b,c\}$
+- Alfabeto del nastro di lavoro è $\Gamma=\{a,b\}$
+- Configurazione iniziale: $q_0\#\uparrow xc\hat x\#\uparrow\square$
+- Tre stati: $q_0$ (scansione di x), $q_1$ (scansione di $\hat x$), $q_2$ stato finale. Quindi $Q=\{q_0,q_1,q_2\}$ e $F=\{q_2\}$
+
+Funzione di transizione:
+
+- Lettura e copiatura di x: $\delta(q_0,a,\square)=(q_0,a,a,\to,\to),\delta(q_0,b,\square)=(q_0,b,b,\to,\to)$
+- Lettura separatore: $\delta(q_0,c,\square)=(q_1,c,\square,\to,\leftarrow)$
+- Lettura e verifica di $\hat x$:
+	- Caratteri uguali sui due nastri $\delta(q_1,a,a)=(q_1,a,a,\to,\leftarrow),\delta(q_1,b,b)=(q_1,b,b,\to\leftarrow)$
+	- Caratteri diversi sui due nastri: in questo caso la stringa non viene accettata. Nessuna transizione definita
+- Terminazione della verifica: $\delta(q_1,\square,\square)=(q_2,\square,\square,\circ,\circ)$
+
+
+

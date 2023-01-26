@@ -4,29 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "61aa7b7cc6ca229b",
+        "id": "f761157d218e8b72",
         "type": "tabs",
         "children": [
           {
-            "id": "e5f23c9c9dd5d829",
+            "id": "3c8d8dd006e68fa8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
                 "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e2eb23c9d68a3531",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Day Planners/Day Planner-20230113.md",
-                "mode": "source",
                 "source": false
               }
             }
@@ -81,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.50247192382812
+    "width": 236.50247192382812,
+    "collapsed": true
   },
   "right": {
     "id": "48452ee984413249",
@@ -97,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
+                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md"
+                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md"
               }
             }
           },
@@ -168,7 +157,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 295.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,14 +170,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e5f23c9c9dd5d829",
+  "active": "3c8d8dd006e68fa8",
   "lastOpenFiles": [
-    "Appunti FI/MOD I/Lezione 5 - Automi.md",
+    "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
     "Appunti FI/MOD I/Lezione 2 - RE,Linguaggi e problemi.md",
-    "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Esami/Date Esami.md",
     "Day Planners/Day Planner-20230113.md",
+    "Esami/Date Esami.md",
+    "Appunti FI/MOD I/Lezione 5 - Automi.md",
     "README.md",
     "Esami/FotoEsami/Pasted image 20230112143843.png",
     "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md"

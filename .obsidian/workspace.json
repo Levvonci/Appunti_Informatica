@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
+                "file": "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.50247192382812,
-    "collapsed": true
+    "width": 236.50247192382812
   },
   "right": {
     "id": "48452ee984413249",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
+                "file": "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
+                "file": "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md"
+                "file": "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md"
               }
             }
           },
@@ -172,8 +171,8 @@
   },
   "active": "3c8d8dd006e68fa8",
   "lastOpenFiles": [
-    "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
+    "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Appunti FI/MOD I/Lezione 2 - RE,Linguaggi e problemi.md",
     "Day Planners/Day Planner-20230113.md",
     "Esami/Date Esami.md",

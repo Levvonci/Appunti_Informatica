@@ -13,8 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti ASD/Algoritmi/Algoritmi.md",
-                "mode": "preview",
+                "file": "Formulario.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "59b4e3d93f809820",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Formulario.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti ASD/Algoritmi/Algoritmi.md",
+                "file": "Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti ASD/Algoritmi/Algoritmi.md",
+                "file": "Formulario.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti ASD/Algoritmi/Algoritmi.md"
+                "file": "Formulario.md"
               }
             }
           },
@@ -171,14 +183,15 @@
   },
   "active": "3c8d8dd006e68fa8",
   "lastOpenFiles": [
+    "Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
+    "Formulario.md",
+    "Appunti ASD/Algoritmi/Algoritmi.md",
     "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md",
     "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
     "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
     "Appunti FI/MOD I/Lezione 2 - RE,Linguaggi e problemi.md",
     "Day Planners/Day Planner-20230113.md",
     "Esami/Date Esami.md",
-    "Appunti FI/MOD I/Lezione 5 - Automi.md",
-    "README.md",
-    "Esami/FotoEsami/Pasted image 20230112143843.png"
+    "Appunti FI/MOD I/Lezione 5 - Automi.md"
   ]
 }

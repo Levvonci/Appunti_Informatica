@@ -1,4 +1,4 @@
-# Richiami sulla parte finale dell'ultima lezione
+ik# Richiami sulla parte finale dell'ultima lezione
 
 $\Omega=\lbrace 0,1\rbrace\times...\times \lbrace 0,1\rbrace=\lbrace\omega=(\omega_1,...,1omega_n):\omega_1,...,\omega_n\in \lbrace 0,1\rbrace\rbrace$
 $\mathcal A=\mathcal P(\Omega)$

@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ecdb0a48d887b7b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md"
               }
             }
           },
@@ -155,17 +168,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4d54be127703aec9",
+  "active": "ecdb0a48d887b7b3",
   "lastOpenFiles": [
+    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
+    "Pasted image 20230306153400.png",
+    "Pasted image 20230306152528.png",
+    "Appunti LMP/MOD II/Img/Pasted image 20230306152437.png",
     "Reti Logiche/Lezione I - Introduzione.md",
+    "README.md",
     "Orario.png.md",
     "Orario.md",
     "Orario.png",
-    "README.md",
     "Appunti LMP/MOD II/Img/Pasted image 20230306121745.png",
     "Appunti LMP/MOD II/Img/Pasted image 20230306121803.png",
     "Appunti LMP/MOD II/Img",
-    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
     "Reti Logiche",
     "Day Planners/Reti Logiche/Untitled.canvas",
     "Day Planners/Reti Logiche/Lezione I -.md",

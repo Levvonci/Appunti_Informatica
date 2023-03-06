@@ -25,4 +25,7 @@
 >	Quindi: 
 >		Io volo
 >Quindi la logica si occupa di studiare la struttura del ragionamento indipendentemente dal valore di verità che assume
->
+
+# Teoria degli insiemi
+> L'Insieme è una collezione di oggetti 
+> 

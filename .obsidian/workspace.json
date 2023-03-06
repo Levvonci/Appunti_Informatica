@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "f761157d218e8b72",
+        "id": "833524f6e6553987",
         "type": "tabs",
         "children": [
           {
-            "id": "3c8d8dd006e68fa8",
+            "id": "5477d9e3b16b55d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti CPS/Lezione 5.md",
-                "mode": "source",
+                "file": "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
+                "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "3eb24dd5e94ae345",
+            "id": "c35204f6dcc328bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Orario.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Orario.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Orario.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Orario.md"
+                "file": "README.md"
               }
             }
           },
@@ -182,17 +182,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3eb24dd5e94ae345",
+  "active": "c35204f6dcc328bd",
   "lastOpenFiles": [
-    "Appunti CPS/Lezione 5.md",
-    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
+    "Appunti SOR/MOD II",
+    "Appunti LMP/MOD II",
+    "Appunti FI/MOD II",
+    "Appunti BSD/MOD II",
+    "Appunti ASD/MOD II",
+    "Day Planners/Day Planner-20230306.md",
     "Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
+    "Appunti CPS/Lezione 5.md",
+    "Day Planners/Day Planner-20230113.md",
+    "Orario.md",
+    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Formulario.md",
     "Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
     "Appunti ASD/Algoritmi/Algoritmi.md",
     "Appunti FI/MOD I/Lezione 4 - Ancora sulle grammatiche.md",
-    "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md",
-    "Appunti FI/MOD I/Lezione 1 - Insiemi infiniti, Linguaggi.md",
-    "Appunti FI/MOD I/Lezione 2 - RE,Linguaggi e problemi.md"
+    "Appunti FI/MOD I/Lezione 3 - RE,Grammatiche.md"
   ]
 }

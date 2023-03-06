@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5477d9e3b16b55d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c35204f6dcc328bd",
+            "id": "4d54be127703aec9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -152,20 +139,6 @@
           }
         ],
         "currentTab": 4
-      },
-      {
-        "id": "343a9b41bab337a2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ab203becb7b78f41",
-            "type": "leaf",
-            "state": {
-              "type": "timeline",
-              "state": {}
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
@@ -182,8 +155,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c35204f6dcc328bd",
+  "active": "4d54be127703aec9",
   "lastOpenFiles": [
+    "Reti Logiche/Lezione I - Introduzione.md",
+    "Orario.png.md",
+    "Orario.md",
+    "Orario.png",
+    "README.md",
+    "Appunti LMP/MOD II/Img/Pasted image 20230306121745.png",
+    "Appunti LMP/MOD II/Img/Pasted image 20230306121803.png",
+    "Appunti LMP/MOD II/Img",
+    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+    "Reti Logiche",
+    "Day Planners/Reti Logiche/Untitled.canvas",
+    "Day Planners/Reti Logiche/Lezione I -.md",
+    "Day Planners/Reti Logiche",
+    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Appunti SOR/MOD II",
     "Appunti LMP/MOD II",
     "Appunti FI/MOD II",
@@ -193,8 +180,6 @@
     "Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
     "Appunti CPS/Lezione 5.md",
     "Day Planners/Day Planner-20230113.md",
-    "Orario.md",
-    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Formulario.md",
     "Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
     "Appunti ASD/Algoritmi/Algoritmi.md",

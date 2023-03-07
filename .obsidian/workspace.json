@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "258f3f5da65c766f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
+                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
+                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md"
+                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md"
               }
             }
           },
@@ -168,10 +180,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ecdb0a48d887b7b3",
+  "active": "258f3f5da65c766f",
   "lastOpenFiles": [
-    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
     "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
+    "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
     "Pasted image 20230306153400.png",
     "Pasted image 20230306152528.png",
     "Appunti LMP/MOD II/Img/Pasted image 20230306152437.png",

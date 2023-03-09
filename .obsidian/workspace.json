@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "833524f6e6553987",
+        "id": "fb13b79b38eb46b4",
         "type": "tabs",
         "children": [
           {
-            "id": "4d54be127703aec9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ecdb0a48d887b7b3",
+            "id": "a333ce18d83e4f58",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,19 +20,19 @@
             }
           },
           {
-            "id": "258f3f5da65c766f",
+            "id": "47cf013c048809ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+                "file": "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.50247192382812
+    "width": 236.50247192382812,
+    "collapsed": true
   },
   "right": {
     "id": "48452ee984413249",
@@ -110,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+                "file": "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+                "file": "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Appunti FI/MOD II/Lezione 1 - Introduzione.md"
+                "file": "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md"
               }
             }
           },
@@ -180,13 +169,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "258f3f5da65c766f",
+  "active": "47cf013c048809ee",
   "lastOpenFiles": [
     "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
-    "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md",
     "Appunti LMP/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
+    "Pasted image 20230308093005.png",
     "Pasted image 20230306153400.png",
     "Pasted image 20230306152528.png",
+    "Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
+    "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
+    "Appunti ASD/MOD II/Lezione 1 -.md",
     "Appunti LMP/MOD II/Img/Pasted image 20230306152437.png",
     "Reti Logiche/Lezione I - Introduzione.md",
     "README.md",
@@ -200,14 +194,12 @@
     "Day Planners/Reti Logiche/Untitled.canvas",
     "Day Planners/Reti Logiche/Lezione I -.md",
     "Day Planners/Reti Logiche",
-    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Appunti SOR/MOD II",
     "Appunti LMP/MOD II",
     "Appunti FI/MOD II",
     "Appunti BSD/MOD II",
     "Appunti ASD/MOD II",
     "Day Planners/Day Planner-20230306.md",
-    "Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
     "Appunti CPS/Lezione 5.md",
     "Day Planners/Day Planner-20230113.md",
     "Formulario.md",

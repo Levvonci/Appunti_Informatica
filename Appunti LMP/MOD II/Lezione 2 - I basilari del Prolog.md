@@ -21,7 +21,7 @@
 
 # Predicati
 >- Espressi tramite la notazione $f(t_1,....,t_n)$
->- f è un atomo oche prende il nome di funtore
+>- f è un atomo che prende il nome di funtore
 >- $t_1,....,t_n$ sono gli argomenti e sono dei termini (predicato f con n argomenti, ha arità n)
 
 # Clausole
@@ -37,7 +37,7 @@
 
 # Regole
 > - Head :-Body . significa che affinchè la Head sia vera deve essere vero il Body (e quindi i predicati che lo compongono)
-> - Nel Body ci sono 1 o più predicati separati da, (and) o da ; (or)
+> 	- Nel Body ci sono 1 o più predicati separati da , (and) o da ; (or)
 > - Ogni regola termina con .
 
 # Fatti 

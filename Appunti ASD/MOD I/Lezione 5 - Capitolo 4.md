@@ -1,6 +1,5 @@
 
 # Ordinamento
-
 ## Il problema dell'ordinamento
 - Input : una sequenza di n numeri $\langle a_1,a_2,....,a_n\rangle$
 - Output: una permutazione(riarrangiamento) $\langle a_1',a_2',...,a_n'\rangle$ della sequenza data in input tale che $a_1'\leq a_2'\leq...\leq a_n'$ 
@@ -33,8 +32,8 @@
 
 ### Complessità temporale (analisi)
 T(n)=#operazioni elementari sul modello RAM a costi uniformi eseguiita dall'algoritmo nel caso peggiore su istanze di dimensione n
-#### Upper Bound
 
+#### Upper Bound
 >SelectionSort(A)
 >1. for k=0 to n-2 do
 >2. m=k+1
@@ -44,11 +43,12 @@ T(n)=#operazioni elementari sul modello RAM a costi uniformi eseguiita dall'algo
 
 - linee da 3 a 5: eseguite al più n volte per ogni ciclo esterno
 - linee da 1 a 5: ciclo esterno eseguito al più n volte
+
 Ogni linea di codice costa O(1)
+
 $T(n)\leq 5n^2O(1)=\Theta(n^2)\implies T(n)=O(n^2)$
 
 #### Lower Bound
-
 >SelectionSort(A)
 >1. for k=0 to n-2 do
 >2. m=k+1
@@ -66,6 +66,7 @@ Upper Bound $O(n^2)$ e Lower Bound $\Omega(n^2)$ allora $T(n)=\Theta(n^2)$
 ## Altri algoritmi di ordinamento con tempo $O(n^2)$
 ### Insertion Sort
 **Approccio incrementale**: estende l'ordinamento da k a k+1 elementi, posizionando l'elemento (k+1)-esimo nella posizione corretta rispetto ai primi k elementi
+
 ![[Pasted image 20221020093938.png|center|500]]
 
 ### Bubble Sort
@@ -91,11 +92,11 @@ Usa la tecnica del divide et impera.
 > 	3. MergeSort(A,m+1,f)
 > 	4. Merge(A,i,m,f) $\implies\:fonde\:A[i;m]\:e\:A[m+1;f]\:output\:A[i;f]$
 
-**Notazione**: dato un array A e due indici $x\leq y$,denotiamo con $A[x;y]$ la porzione di A costituita da $A[x],A[x+1],...,A[y]$
+**Notazione**:
+Dato un array A e due indici $x\leq y$,denotiamo con $A[x;y]$ la porzione di A costituita da $A[x],A[x+1],...,A[y]$
 
 ### Esempio di esecuzione
 ![[Pasted image 20221020094724.png|center|600]]
-
 
 ### Procedura Merge
 Due array ordinati A e B possono essere fusi rapidamente:
@@ -117,15 +118,21 @@ Due array ordinati A e B possono essere fusi rapidamente:
 >3. else copia $A[k_2;f_2]$ alla fine di X
 >4. copia X in $A[i_1;f_2]$
 
-**Lemma** La procedure Merge fonde due sequenze ordinate di lunghezza $n_1\:e\:n_2$ in tempo $\Theta(n_1+n_2)$
+**Lemma** 
+La procedure Merge fonde due sequenze ordinate di lunghezza $n_1\:e\:n_2$ in tempo $\Theta(n_1+n_2)$
+
 **dim**
 Ogni confronto "consuma" un elemento di una delle due sequenze. Ogni posizione di X è riempita in tempo costante. Il numero totale di elementi è $n_1+n_2$.Anche l'ultima linea (copia del vettore ausiliario) costa $\Theta(n_1+n_2)$
 
 ### Tempo di esecuzione
 La complessità termporale del MergeSort è descritto dalla seguente relazione di ricorrenza:
+
 $$T(n)=2T(n/2)+O(n)$$
+
 Usando i teorema Master abbiamo che:
+
 $$T(n)=O(nlog(n))$$
+
 **Quanta memoria ausiliaria usiamo?**
 La complessità spaziale del MergeSort è $\Theta(n)$:
 - la procedura Merge usa memoria asuiliaria pari alla dimensione di porzione da fondere;
@@ -134,10 +141,10 @@ La complessità spaziale del MergeSort è $\Theta(n)$:
 - numero di chiamate di MergeSOrt attive contemporaneamente sono $O(log(n))$
 
 Il MergeSort non ordina in loco:
+
 - occupazione di memoria ausiliaria pari a $\Theta(n)$
 
 # Ancora un algoritmo di ordinamento che usa la tecnica del divide et impera: il Quick Sort
-
 ## QuickSort
 Usa la tecnica del divide et impera:
 1. **Divide**: scegli un elemento x della sequenza(perno) e partiziona la sequenza in elementi $\leq x$ ed elementi $\gt x$
@@ -158,7 +165,6 @@ Rispetto al MergeSort, divide complesso ed impera semplice
 ![[Pasted image 20221020101754.png|center|600]]
 
 **Pseudo-codice Partition**
-
 >Partition(A,i,f)
 >1. $x=A[i]$
 >2. inf=i
@@ -179,7 +185,6 @@ Partiziona $A[i;f]\:rispetto\:a\:A[i]$
 In ogni istante, gli elementi $A[i],...,A[inf-1]$ sono $\leq$ del perno, mentre gli elementi $A[sup+1],...,A[f]$ sono $\gt$ del perno
 
 **Pseudo-codice QuickSort**
-
 >QuickSort(A,i,f)
 >1. if($i\lt f$) then
 >	1. m=Partition(A,i,f)
@@ -192,7 +197,8 @@ In ogni istante, gli elementi $A[i],...,A[inf-1]$ sono $\leq$ del perno, mentre 
 
 L'albero delle chiamate corsive può essere sbilanciato
 
-**Corretto?** si
+**Corretto?**
+si
 
 ### Complessità: 
 #### Analisi nel caso peggiore
@@ -201,14 +207,15 @@ Quindi dopo n invocazioni di Partition, ognuna di costo $O(n)$ ho il vettore ord
 
 Il caso peggiore si verifica quando il perno scelto ad ogni passo è il minimo o il massimo degli elementi nell'array
 La complessità in questo caso è:
+
 $$T(n)=T(n-1)+T(0)+O(n)=T(n-1)+O(1)+O(n)=T(n-1)+O(n)\implies T(n)=O(n^2)$$
+
 #### Analisi caso migliore
 $O(nlog(n))$, partizionamento sempre bilanciato = albero della ricorsione bilanciato
 
 ![[Pasted image 20221020103857.png|center|600]]
 
 #### Analisi caso medio
-
 - **Problema**: la partizione può essere sbilanciata
 	- La probabilità che ad ogni passo si presenti la partizione peggiore è molto bassa
 	- Per partizione che non sono "troppo sbilanciate" l'algoritmo è veloce
@@ -220,8 +227,8 @@ La complessità è ancora $O(nlog(n))$
 
 ![[Pasted image 20221020104253.png|center|620]]
 
-
 ... e se le istanze non sono equiprobabili?
+
 ### Versione Randomizzata
 Si sceglie il perno x a caso fra gli elementi da ordinare
 

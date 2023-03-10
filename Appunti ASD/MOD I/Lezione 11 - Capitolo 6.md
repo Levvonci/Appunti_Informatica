@@ -1,11 +1,10 @@
 Ritornando a [[Lezione 10 - Capitolo 6]]
 
 # Alberi AVL (Adel’son-Vel’skii e Landis, 1962)
-
 ## Definizioni
-
 _Def (Fattore di bilanciamento)_
 **Fattore di bilanciamento $\beta(v)$** di un nodo v := altezza del sottoalbero sinistro di v - altezza del sottoalbero destro di v
+
 _Def_
 Un albero si dice **bilanciato in altezza** se ogni nodo v ha un fattore di bilanciamento in valore assoluto $\leq1$
 
@@ -19,7 +18,6 @@ Generalmente $\beta(v)$ mantenuto come informazione addizionale nel record relat
 è un albero AVL? Si, tutti i nodi hanno fattore di bilanciamento = 0
 
 **Esempio**
-
 ![[appunti asd/mod i/immagini/Pasted image 20221128162110.png|center|500]]
 
 è un albero AVL? No, Non vale la proprietà sui fattori di bilanciamento
@@ -28,7 +26,6 @@ Generalmente $\beta(v)$ mantenuto come informazione addizionale nel record relat
 >Per convenzione l'altezza di un albero vuoto = -1
 
 **Esempio**
-
 ![[appunti asd/mod i/immagini/Pasted image 20221128162438.png|center|600]]
 
 è un albero AVL? Si, proprietà sui fattori di bilanciamento rispettata
@@ -60,6 +57,7 @@ $T_i$: albero di Fibonacci di altezza i (albero AVL di altezza i con il minimo n
 
 Si intravede lo schema per generare l'i-esimo albero di Fibonacci a partire dai precedenti?
 **Lo schema**:
+
 ![[appunti asd/mod i/immagini/Pasted image 20221128164125.png|300]]
 
 >[!important]- Lemma
@@ -77,15 +75,17 @@ $n_h=F_{h+3}-1=\Theta(\phi^h)\implies h=\Theta(log(n_h))=O(log(n))$
 > Ricorda che vale $F_k=\Theta(\phi^k),\phi=1.618...$ sezione aurea
 
 corollario segue da $n_h\leq n$
-$\square$ 
+$\square$
 
 **Posso usare un albero AVL per implementare un dizionario?**
+
 ![[appunti asd/mod i/immagini/Pasted image 20221128165052.png|center|600]]
 
 Come implemento Insert(14)?...e Delete(25)?
 Dopo l'inserimento non è più un albero AVL
 
 **Domanda**:
+
 di **quanto** e **quali** fattori di bilanciamento **cambiano** a fronte di un inserimento/cancellazione?
 
 **Se parto da un albero AVL** e inserisco/cancello un nodo
@@ -93,33 +93,37 @@ di **quanto** e **quali** fattori di bilanciamento **cambiano** a fronte di un i
 - (quanto) i fattori di bilanciamento cambiano di +/- 1
 
 ## Implementazione delle operazioni
-
 - L'operazione search procede come in un BST
 - Ma inserimenti e cancellazioni potrebbero sbilanciare l'albero $\implies$ Manteniamo il bilanciamento tramite opportune **rotazioni**
 
 ### Rotazione di base verso destra/sinistra sul nodo v/u
-
 ![[appunti asd/mod i/immagini/Pasted image 20221128165909.png|center|700]]
 
 Mantiene la proprietà di ricerca, richiede tempo $O(1)$
 
 #### Ribilanciamento tramite rotazioni
-
 - Le rotazioni sono effettuate su nodi sbilanciati
 - Sia v un nodo di profondità massima (nodo **critico**) con un fattore di bilanciamento $\beta(v)\pm2$ 
 - Esiste un sottoalbero T di v che lo sbilancia
-- A seconda della posizione di T si hanno 4 casi:![[appunti asd/mod i/immagini/Pasted image 20221128170422.png|700]]
+- A seconda della posizione di T si hanno 4 casi:
+
+ ![[appunti asd/mod i/immagini/Pasted image 20221128170422.png|700]]
+
 - I quattro casi sono simmetrici a coppie
 
 ##### Caso SS - $[\beta(v)=2,\text{altezza}\:T_1=h+1]$
+- L'altezza di $T(v)=h+3$, l'altezza di $T(u)=h+2$, l'altezza di $T_3=h$ e l'altezza di $T_1=h+1\implies\beta(v)=2$ e lo sbilanciamento è provocato da $T_1$ 
 
-- L'altezza di $T(v)=h+3$, l'altezza di $T(u)=h+2$, l'altezza di $T_3=h$ e l'altezza di $T_1=h+1\implies\beta(v)=2$ e lo sbilanciamento è provocato da $T_1$ ![[appunti asd/mod i/immagini/Pasted image 20221128170725.png|center|400]]
+ ![[appunti asd/mod i/immagini/Pasted image 20221128170725.png|center|400]]
+
 - Si applica una rotazione semplice verso destra su v, 2 sottocasi possibili:
 	1.  **l'altezza di $T_2$ è h** $\implies$ l'altezza dell'albero coinvolto nella rotazione passa da h+3 a h+2
 	2.  **l'altezza di $T_2$ è h+1** $\implies$ l'altezza dell'albero coinvolto nella rotazione rimane pari a h+3
 
 ![[appunti asd/mod i/immagini/Pasted image 20221128171142.png|center|700]]
+
 ...i due sottocasi del caso SS...
+
 ![[appunti asd/mod i/immagini/Pasted image 20221128171218.png|center|700]]
 
 ###### Osservazioni sul caso SS
@@ -129,7 +133,9 @@ Mantiene la proprietà di ricerca, richiede tempo $O(1)$
 - Nel caso 1, dopo la rotazione, l'albero diminuisce la sua altezza di uno
 
 ##### Caso SD - $[\beta(v)=2,altezza\:T_1=h]$
-- L'altezza di $T(v)=h+3$, l'altezza di $T(z)=h+2$, l'altezza di $T_1=h$, l'altezza di $T_4=h$ e l'alteza di $T(w)=h+1\implies\beta(v)=2$ e $\beta(z)=-1$ cioè lo sbilanciamento è provocato dal sottoalbero destro di z ![[appunti asd/mod i/immagini/Pasted image 20221128171941.png|center|400]]
+- L'altezza di $T(v)=h+3$, l'altezza di $T(z)=h+2$, l'altezza di $T_1=h$, l'altezza di $T_4=h$ e l'alteza di $T(w)=h+1\implies\beta(v)=2$ e $\beta(z)=-1$ cioè lo sbilanciamento è provocato 
+
+- dal sottoalbero destro di z ![[appunti asd/mod i/immagini/Pasted image 20221128171941.png|center|400]]
 - Applicare due rotazioni semplici: una verso sinistra sul figlio sinistro del nodo critico (nodo z), l'altra verso destra sul nodo critico (nodo v)
 
 ![[appunti asd/mod i/immagini/Pasted image 20221128172111.png|center|700]]
@@ -138,7 +144,6 @@ Mantiene la proprietà di ricerca, richiede tempo $O(1)$
 - Il caso SD può essere provocato sia da inserimenti (in $T_2$ o $T_3$), sia da cancellazioni che abbassano di 1 l'altezza di $T_4$
 
 #### Insert(elem e, chiave k)
-
 1. Crea un nuovo nodo u con elem=e e chiave=k
 2. Inserisci u come in un BST
 3. Ricalcola i fattori di bilanciamento dei nodi nel cammino della radice a u: sia v il più profondo nodo con fattore di bilanciamento pari a $\pm2$ (**nodo critico**)
@@ -150,7 +155,6 @@ Mantiene la proprietà di ricerca, richiede tempo $O(1)$
 Vedi esempio qua [Esempio Insert albero AVL](https://www.mat.uniroma2.it/~guala/cap6_2021.pdf#page=51)
 
 #### Delete(elem e)
-
 1.  Cancella il nodo come in un BST
 2. Ricalcola il fattore di bilanciamento del **padre del nodo eliminato** (che potrebbe essere diverso dal nodo contenente **e**), ed esegui l'opportuna rotazione semplice o doppia ove necessario
 3. Ripeti qeusto passo, sino ad arrivare eventualmente alla radice dell'AVL
@@ -162,19 +166,15 @@ Vedi esempio qua [Esempio Insert albero AVL](https://www.mat.uniroma2.it/~guala/
 Vedi esempio delete qui [Esempio Delete su AVL](https://www.mat.uniroma2.it/~guala/cap6_2021.pdf#page=55)
 
 ##### Cancellazione con rotazioni a cascata
-
 ![[appunti asd/mod i/immagini/Pasted image 20221128173516.png|center]]
 
 ### Costo delle operazioni
-
 Tutte le operazioni hanno costo $O(log(n))$ poichè l'altezza dell'albero è $O(log(n))$ e ciascuna rotazione richiede solo tempo costante
 
 ## Classe AlberoAVL
-
 ![[appunti asd/mod i/immagini/Pasted image 20221128173733.png|center|700]]
 
 ## Qualche dettaglio importante
-
 Nell'analisi della complessità dell'operazione di insert/delete abbiamo implicitamente usato le seguenti tre proprietà:
 1. dato un nodo v,è possibile conoscere $\beta(v)$ in tempo $O(1)$
 2. dopo aver inserito/cancellato un nodo v nell'albero come se fosse un semplice BST, è possibile ricalcolare i fattori di bilanciamento dei nodi lungo il cammino da v alla radice in tempo complessivo $O(log(n))$

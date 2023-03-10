@@ -16,7 +16,7 @@
 - [[Lezione 14 - Capitolo 11]]
 - [[Lezione 15 - Capitolo 11]]
 - [[Lezione 16 - Capitolo 13]]
-- 
+
 
 
 # Grafo delle lezioni

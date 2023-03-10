@@ -1,6 +1,5 @@
 
 # Lower Bound al probroblema di ordinamento e Algoritmi Lineari
-
 ## Sommario
 
 - Delimitazioni inferiori e superiori (di algoritmi e problemi)
@@ -46,7 +45,6 @@ Abbiamo quindi un **gap di log(n)** tra upper bound e lower bound
 **Possiamo fare meglio?**
 
 ### Sui limiti della velocità: una delimitazione inferiori alla complessità del problema
-
 >**Ordinamento per confronti**
 >Dati due elementi $a_i,a_j$, per determinare l'ordinamento relativo effettuiamo una delle seguenti operazioni di confronto:
 >$$a_i\lt a_j\:;\:a_i\leq a_j\:;\:a_i=a_j\:;\:a_i\geq a_j\:;\:a_i\gt a_j$$
@@ -57,13 +55,13 @@ Abbiamo quindi un **gap di log(n)** tra upper bound e lower bound
 >**Teorema**:
 >**Ogni** algoritmo basato su confronti che ordina n elementi deve fare nel caso peggiore $\Omega(nlog(n))$ confronti
 
-**Oss**: il **num. di passi** che un algoritmo esegue è un lower bound al **num. di passi elementari** che esegue
+**Oss**
+il **num. di passi** che un algoritmo esegue è un lower bound al **num. di passi elementari** che esegue
 
 >**Corollario**
 >Il MergeSort e l'HeapSort sono algoritmi ottimi (almeno dentro la classe di algoritmi basati su confronti)
 
 ### Uno strumento utile: albero di decisione
-
 Gli algoritmi di ordinamento per confronto possono essere descritti in modo astratto in termini di **alberi di decisione**
 
 Un generico algoritmo di ordinamento per confronto lavora nel modo seguente:
@@ -74,7 +72,6 @@ _Def_
 **Albero di decisione**: Descrive i confronti che l'algoritmo esegue quando opera su un input di una **determinata dimensione**. I movimenti dei dati e tutti gli altri aspetti dell'algoritmo vengono ignorati
 
 ## Albero di decisione
-
 Descrive le diverse sequenze di confronti che A potrebbe fare su istanze di dimensione n
 Nodo interno (non foglia): $i:j$
 - modella il **confronto** tra $a_i\:e\:a_j$
@@ -105,19 +102,22 @@ PSEUDO CODICE INSERTIONSORT
 >Un albero binario T con k foglie, ha altezza almeno $log_2k$
 
 **dim** (per induzione su k)
+
 **caso base**: k=1, altezza almeno $log_21=0$
+
 **caso induttivo**: $k\gt 1$
+
 Considera il nodo interno v più vicino alla radice che ha due figli (v potrebbe essere la radice). nota che v deve esistere perchè $k\gt1$
 
 v ha almeno un figlio u che è radice di un (sotto)albero che ha almeno k/2 foglie e $\lt$ k foglie
 
 T ha altezza almeno
+
 $1+log_2k/2=1+log_2k-log_22=log_2k$
 
 ![[Pasted image 20221103100148.png|center|300]]
 
 ## Il Lower Bound $\Omega(nlog(n))$
-
 Consideriamo l'albero di decisione di un qualsiasi algoritmo che risolve il problema dell'ordinamento di n elementi
 L'altezza h dell'albero di decisione è almeno $log_2(n!)$
 **Formula di Stirling**: $n!\approx (2\pi n)^{1/2}\cdot(n/e)^n$
@@ -145,7 +145,6 @@ Scorre Y da sinistra a destrae, se $Y[x]=k$, scrive in X il valore x per k volte
 ![[Pasted image 20221103102511.png|center|700]]
 
 ### PseudoCodice
-
 ![[Pasted image 20221103102620.png|center|400]]
 
 - linee 1.4 costo $O(1)$- tempo costante
@@ -154,20 +153,24 @@ Scorre Y da sinistra a destrae, se $Y[x]=k$, scrive in X il valore x per k volte
 - linea 5 costo $O(k)$
 - linee 6-9 costo: per i fissato num. volte che le istruzioni vengono eseguite è al più $1+Y[i]\implies O(k+n)$
 
-Quindi possiamo dire che
-$$\sum_{i=1}^k(1+Y[i])=\sum_{i=1}^k1+\sum_{i=1}^kY[i]=k+n$$
-### Analisi
+Quindi possiamo dire che:
 
+$$\sum_{i=1}^k(1+Y[i])=\sum_{i=1}^k1+\sum_{i=1}^kY[i]=k+n$$
+
+### Analisi
 - Tempo $O(1)+O(k)=O(k)$ per inizializzare Y a 0
 - Tempo $O(1)+O(n)=O(n)$ per calcolare i valori dei contatori
 - Tempo $O(n+k)$ per ricostruire X
 $\implies O(n+k)$
+
 Tempo lineare se $k=O(n)$
 Contraddice il lower bound di $\Omega(nlog(n))$? **No** perchè l'**IntegerSort** non è un algoritmo basato su confronti!!
 
 **Una domanda**
 Che complessità temporale ha l'IntegerSort quando $k=\omega(n)$, per esempio $k=\Theta(n^c)$, con c costante?
+
 $$...T(n)=\Theta(n^c)...=\omega(nlog(n))$$
+
 per $c\gt1$
 
 
@@ -175,7 +178,9 @@ per $c\gt1$
 Dato un vettore X di n interi in $[1,k]$, costruire in tempo $O(n+k)$ una struttura dati (**oracolo**) che sappia rispondere a domande (**query**) in tempo $O(1)$ del tipo : "quanti interi in X cadono nell'intervallo $[a,b]$?", per ogni a e b
 
 ![[Pasted image 20221103104429.png|center|500]]
+
 ![[Pasted image 20221103104448.png|center|500]]
+
 
 Soluzione qui -> [[Esercizio lezione 7 (Oracolo e query)]]
 

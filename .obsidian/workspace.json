@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1bfbd236bce75799",
+        "id": "b3662a3830c7bc37",
         "type": "tabs",
         "children": [
           {
-            "id": "e410169d6ee9de63",
+            "id": "8355e4042428dbf7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.50247192382812,
+    "width": 341.00312423706055,
     "collapsed": true
   },
   "right": {
@@ -82,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md"
+              }
             }
           },
           {
@@ -162,11 +170,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1251ae3fbe0e8800",
+  "active": "8355e4042428dbf7",
   "lastOpenFiles": [
-    "Appunti ASD/MOD I/Indice degli appunti ASD.md",
-    "Appunti ASD/MOD I/Lezione 0 - Algoritmi e strutture dati.md",
+    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
+    "Appunti CPS/Lezione 2.md",
+    "Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
+    "Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
+    "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
     "Appunti ASD/MOD I/Lezione 1 - Capitolo 1.md",
+    "Appunti ASD/MOD I/Lezione 0 - Algoritmi e strutture dati.md",
+    "ASD/img/img0.png.md",
+    "ASD/img",
+    "ASD",
+    "Appunti ASD/MOD I/Indice degli appunti ASD.md",
     "Lezione 1 - Capitolo 1.md",
     "Capitolo 0 - Algoritmi e strutture dati.md",
     "Appunti ASD/MOD I/Lezione 16 - Capitolo 13.md",
@@ -180,11 +196,7 @@
     "Appunti ASD/MOD I/Lezione 8 - Capitolo 4.md",
     "Appunti ASD/MOD I/Lezione 7 - Capitolo 4.md",
     "Appunti ASD/MOD I/Lezione 6 - HeapSort.md",
-    "Appunti ASD/MOD I/Lezione 5 - Capitolo 4.md",
-    "Appunti ASD/MOD I/Lezione 4 - Capitolo 2.md",
-    "Appunti ASD/MOD I/Lezione 3 - Capitolo 2.md",
     "Untitled.md",
-    "Appunti ASD/MOD I/Lezione 2 - Capitolo 2.md",
     "Appunti ASD/Algoritmi e strutture dati.pdf",
     "Algoritmi e strutture dati.pdf",
     "Appunti LMP/MOD II/Img/Pasted image 20230306152437.png",
@@ -196,7 +208,6 @@
     "Appunti LMP/MOD II/Img/Pasted image 20230306152528.png",
     "Appunti LMP/MOD II/Lezione 2 - I basilari del Prolog.md",
     "Appunti LMP/MOD II/Lezione 3 - Esecuzione dei programmi in prolog.md",
-    "Appunti FI/MOD II/Lezione 1 - Introduzione.md",
     "Orario.png",
     "Appunti LMP/MOD II/Img",
     "Reti Logiche",
@@ -204,8 +215,6 @@
     "Day Planners/Reti Logiche",
     "Appunti SOR/MOD II",
     "Appunti LMP/MOD II",
-    "Appunti FI/MOD II",
-    "Appunti BSD/MOD II",
-    "Appunti ASD/MOD II"
+    "Appunti FI/MOD II"
   ]
 }

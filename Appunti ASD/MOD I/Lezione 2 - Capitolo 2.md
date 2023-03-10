@@ -1,7 +1,5 @@
 # Complessità computazionale e notazioni asintotiche
-
 ## Un modello di calcolo storico: la macchina di Turing
-
 ![[Pasted image 20221014151459.png]]
 
 - Troppo di basso livello: somiglia troppo poco ai calcolatori reali su cui girano i programmi
@@ -15,7 +13,6 @@ Un modello più realistico...
 		- ogni cella può contenere un qualunque valore reale/intero
 	- due registri speciali: PC e ACC
 - la RAM è unìastrazione dell'architettura di von Neumann
-
 ![[Pasted image 20221014152028.png]]
 
 ## Modello di calcolo: cosa posso fare
